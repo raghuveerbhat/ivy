@@ -19,7 +19,6 @@ Linear algebra
    linear_algebra/diagonal.rst
    linear_algebra/eigh.rst
    linear_algebra/eigvalsh.rst
-   linear_algebra/rot90.rst
    linear_algebra/inner.rst
    linear_algebra/inv.rst
    linear_algebra/matmul.rst
