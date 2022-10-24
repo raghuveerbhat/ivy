@@ -3,6 +3,8 @@ rot90
 
 .. autofunction:: ivy.functional.ivy.linear_algebra.rot90
 
+.. autofunction:: ivy.array.array_methods.rot90
+
 .. autofunction:: ivy.container.container_methods.static_rot90
 
 .. autofunction:: ivy.container.container_methods.rot90
@@ -33,6 +35,7 @@ rot90
    :caption: rot90
 
    rot90/rot90_functional.rst
+   rot90/rot90_array.rst
    rot90/rot90_container.rst
    rot90/static_rot90_container.rst
 
