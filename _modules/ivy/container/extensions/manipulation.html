@@ -608,6 +608,7 @@
 <span class="sd">        ivy.Container static method variant of ivy.rot90.</span>
 <span class="sd">        This method simply wraps the function, and so the docstring for</span>
 <span class="sd">        ivy.rot90 also applies to this method with minimal changes.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        m</span>
@@ -630,14 +631,16 @@
 <span class="sd">        out</span>
 <span class="sd">            optional output container, for writing the result to. It must have a shape</span>
 <span class="sd">            that the inputs broadcast to.</span>
+
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
 <span class="sd">            Container with a rotated view of m.</span>
+<span class="sd">            </span>
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; m = ivy.Container(a=ivy.array([[1,2], [3,4]]),\</span>
-<span class="sd">                b=ivy.native_array([[1,2,3,4],\</span>
+<span class="sd">                        b=ivy.array([[1,2,3,4],\</span>
 <span class="sd">                                    [7,8,9,10],\</span>
 <span class="sd">                                    [3,4,5,6],\</span>
 <span class="sd">                                    [11,12,13,14]]))</span>
@@ -676,6 +679,7 @@
 <span class="sd">        ivy.Container static method variant of ivy.rot90.</span>
 <span class="sd">        This method simply wraps the function, and so the docstring for</span>
 <span class="sd">        ivy.rot90 also applies to this method with minimal changes.</span>
+
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        self</span>
@@ -698,14 +702,16 @@
 <span class="sd">        out</span>
 <span class="sd">            optional output container, for writing the result to. It must have a shape</span>
 <span class="sd">            that the inputs broadcast to.</span>
+
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
 <span class="sd">        ret</span>
 <span class="sd">            Container with a rotated view of input array.</span>
+
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
 <span class="sd">        &gt;&gt;&gt; m = ivy.Container(a=ivy.array([[1,2], [3,4]]),\</span>
-<span class="sd">                b=ivy.native_array([[1,2,3,4],\</span>
+<span class="sd">                        b=ivy.array([[1,2,3,4],\</span>
 <span class="sd">                                    [7,8,9,10],\</span>
 <span class="sd">                                    [3,4,5,6],\</span>
 <span class="sd">                                    [11,12,13,14]]))</span>
