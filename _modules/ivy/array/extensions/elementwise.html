@@ -420,17 +420,17 @@
 <span class="sd">        Parameters</span>
 <span class="sd">        ----------</span>
 <span class="sd">        self</span>
-<span class="sd">            The input array for which to count non-zeros.</span>
+<span class="sd">            input array for which to count non-zeros.</span>
 <span class="sd">        axis</span>
-<span class="sd">            Axis or tuple of axes along which to count non-zeros. Default is</span>
+<span class="sd">            optional axis or tuple of axes along which to count non-zeros. Default is</span>
 <span class="sd">            None, meaning that non-zeros will be counted along a flattened</span>
 <span class="sd">            version of the input array.</span>
 <span class="sd">        keepdims</span>
-<span class="sd">            If this is set to True, the axes that are counted are left in the</span>
+<span class="sd">            optional, if this is set to True, the axes that are counted are left in the</span>
 <span class="sd">            result as dimensions with size one. With this option, the result</span>
 <span class="sd">            will broadcast correctly against the input array.</span>
 <span class="sd">        dtype</span>
-<span class="sd">            The output dtype</span>
+<span class="sd">            optional output dtype. Default is of type integer.</span>
 <span class="sd">        out</span>
 <span class="sd">            optional output array, for writing the result to.</span>
 
@@ -442,16 +442,16 @@
 
 <span class="sd">        Examples</span>
 <span class="sd">        --------</span>
-<span class="sd">        &gt;&gt;&gt; y = ivy.array([1, 2, 3])</span>
-<span class="sd">        &gt;&gt;&gt; ivy.trapz(y)</span>
-<span class="sd">        4.0</span>
-<span class="sd">        &gt;&gt;&gt; y = ivy.array([1, 2, 3])</span>
-<span class="sd">        &gt;&gt;&gt; x = ivy.array([4, 6, 8])</span>
-<span class="sd">        &gt;&gt;&gt; ivy.trapz(y, x=x)</span>
-<span class="sd">        8.0</span>
-<span class="sd">        &gt;&gt;&gt; y = ivy.array([1, 2, 3])</span>
-<span class="sd">        &gt;&gt;&gt; ivy.trapz(y, dx=2)</span>
-<span class="sd">        8.0</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([1, 2, 3])</span>
+<span class="sd">        &gt;&gt;&gt; x.count_nonzero()</span>
+<span class="sd">        ivy.array(3)</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[[0,1],[2,3]],[[4,5],[6,7]]])</span>
+<span class="sd">        &gt;&gt;&gt; x.count_nonzero(axis=0)</span>
+<span class="sd">        ivy.array([[1, 2],</span>
+<span class="sd">               [2, 2]])</span>
+<span class="sd">        &gt;&gt;&gt; x = ivy.array([[[0,1],[2,3]],[[4,5],[6,7]]])</span>
+<span class="sd">        &gt;&gt;&gt; x.count_nonzero(axis=(0,1), keepdims=True)</span>
+<span class="sd">        ivy.array([[[3, 4]]])</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">return</span> <span class="n">ivy</span><span class="o">.</span><span class="n">count_nonzero</span><span class="p">(</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_data</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="n">axis</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="n">keepdims</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">out</span>
