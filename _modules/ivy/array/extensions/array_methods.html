@@ -131,7 +131,7 @@
 <span></span><span class="c1">#ivy.array.extensions.elementwise</span>
 <span class="c1"># global</span>
 <span class="kn">import</span> <span class="nn">abc</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Tuple</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span><span class="p">,</span> <span class="n">Union</span>
 
 <span class="c1"># local</span>
 <span class="kn">import</span> <span class="nn">ivy</span>
@@ -411,58 +411,6 @@
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="count_nonzero"><a class="viewcode-back" href="../../../../data_classes/array/extensions/array_methods/count_nonzero.html#ivy.array.extensions.array_methods.count_nonzero">[docs]</a><span class="k">def</span> <span class="nf">count_nonzero</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
-    <span class="o">/</span><span class="p">,</span>
-    <span class="o">*</span><span class="p">,</span>
-    <span class="n">axis</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="o">...</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">keepdims</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;ivy.Array instance method variant of ivy.count_nonzero. This method simply</span>
-<span class="sd">    wraps the function, and so the docstring for ivy.count_nonzero also applies to</span>
-<span class="sd">    this method with minimal changes.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    self</span>
-<span class="sd">        input array for which to count non-zeros.</span>
-<span class="sd">    axis</span>
-<span class="sd">        optional axis or tuple of axes along which to count non-zeros. Default is</span>
-<span class="sd">        None, meaning that non-zeros will be counted along a flattened</span>
-<span class="sd">        version of the input array.</span>
-<span class="sd">    keepdims</span>
-<span class="sd">        optional, if this is set to True, the axes that are counted are left in the</span>
-<span class="sd">        result as dimensions with size one. With this option, the result</span>
-<span class="sd">        will broadcast correctly against the input array.</span>
-<span class="sd">    dtype</span>
-<span class="sd">        optional output dtype. Default is of type integer.</span>
-<span class="sd">    out</span>
-<span class="sd">        optional output array, for writing the result to.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    ret</span>
-<span class="sd">       Number of non-zero values in the array along a given axis. Otherwise,</span>
-<span class="sd">       the total number of non-zero values in the array is returned.</span>
-
-<span class="sd">    Examples</span>
-<span class="sd">    --------</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([1, 2, 3])</span>
-<span class="sd">    &gt;&gt;&gt; x.count_nonzero()</span>
-<span class="sd">    ivy.array(3)</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([[[0,1],[2,3]],[[4,5],[6,7]]])</span>
-<span class="sd">    &gt;&gt;&gt; x.count_nonzero(axis=0)</span>
-<span class="sd">    ivy.array([[1, 2],</span>
-<span class="sd">           [2, 2]])</span>
-<span class="sd">    &gt;&gt;&gt; x = ivy.array([[[0,1],[2,3]],[[4,5],[6,7]]])</span>
-<span class="sd">    &gt;&gt;&gt; x.count_nonzero(axis=(0,1), keepdims=True)</span>
-<span class="sd">    ivy.array([[[3, 4]]])</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span></div>
-
-
 <div class="viewcode-block" id="nansum"><a class="viewcode-back" href="../../../../data_classes/array/extensions/array_methods/nansum.html#ivy.array.extensions.array_methods.nansum">[docs]</a><span class="k">def</span> <span class="nf">nansum</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
     <span class="o">/</span><span class="p">,</span>
@@ -547,6 +495,64 @@
 <span class="sd">    &gt;&gt;&gt; x1 = ivy.array([1, 2, 3])</span>
 <span class="sd">    &gt;&gt;&gt; x1.gcd(10)</span>
 <span class="sd">    ivy.array([1.,   2.,  1.])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="isclose"><a class="viewcode-back" href="../../../../data_classes/array/extensions/array_methods/isclose.html#ivy.array.extensions.array_methods.isclose">[docs]</a><span class="k">def</span> <span class="nf">isclose</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+    <span class="n">b</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">rtol</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e-05</span><span class="p">,</span>
+    <span class="n">atol</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">float</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1e-08</span><span class="p">,</span>
+    <span class="n">equal_nan</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">bool</span><span class="p">]</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ivy.Array instance method variant of ivy.isclose. This method simply</span>
+<span class="sd">    wraps the function, and so the docstring for ivy.isclose also applies to</span>
+<span class="sd">    this method with minimal changes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        First input array.</span>
+<span class="sd">    b</span>
+<span class="sd">        Second input array.</span>
+<span class="sd">    rtol</span>
+<span class="sd">        The relative tolerance parameter.</span>
+<span class="sd">    atol</span>
+<span class="sd">        The absolute tolerance parameter.</span>
+<span class="sd">    equal_nan</span>
+<span class="sd">        Whether to compare NaN&#39;s as equal. If True, NaN&#39;s in a will be</span>
+<span class="sd">        considered equal to NaN&#39;s in b in the output array.</span>
+<span class="sd">    out</span>
+<span class="sd">        Alternate output array in which to place the result.</span>
+<span class="sd">        The default is None.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        A new array holding the result is returned unless out is specified,</span>
+<span class="sd">        in which it is returned.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; a = ivy.array([[ 2.1,  3.4,  ivy.nan], [ivy.nan, 2.4, 2.1]])</span>
+<span class="sd">    &gt;&gt;&gt; b = ivy.array([[ 2.1,  3.4,  ivy.nan], [ivy.nan, 2.4, 2.1]])</span>
+<span class="sd">    &gt;&gt;&gt; a.isclose(b)</span>
+<span class="sd">    ivy.array([[True, True, False],</span>
+<span class="sd">           [False, True, True]])</span>
+<span class="sd">    &gt;&gt;&gt; a.isclose(b, equal_nan=True)</span>
+<span class="sd">    ivy.array([[True, True, True],</span>
+<span class="sd">           [True, True, True]])</span>
+<span class="sd">    &gt;&gt;&gt; a=ivy.array([1.0, 2.0])</span>
+<span class="sd">    &gt;&gt;&gt; b=ivy.array([1.0, 2.001])</span>
+<span class="sd">    &gt;&gt;&gt; a.isclose(b, atol=0.0)</span>
+<span class="sd">    ivy.array([True, False])</span>
+<span class="sd">    &gt;&gt;&gt; a.isclose(b, rtol=0.01, atol=0.0)</span>
+<span class="sd">    ivy.array([True, True])</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
