@@ -301,7 +301,6 @@ Citation
 
    functional/backends.rst
    functional/experimental.rst
-   functional/extensions.rst
    functional/frontends.rst
    functional/ivy.rst
 
