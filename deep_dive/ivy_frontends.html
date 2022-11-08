@@ -87,7 +87,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Functions</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../functional/extensions.html">Extensions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functional/experimental.html">Experimental</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/activations.html">Activations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/compilation.html">Compilation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/constants.html">Constants</a></li>
@@ -98,7 +98,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/general.html">General</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/gradients.html">Gradients</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/layers.html">Layers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../functional/ivy/linear_algebra.html">Linear algebra</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../functional/ivy/linalg.html">Linalg</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/losses.html">Losses</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/manipulation.html">Manipulation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../functional/ivy/meta.html">Meta</a></li>
@@ -256,7 +256,7 @@ In the same manner as our <code class="xref py py-func docutils literal notransl
 </div>
 <p>In NumPy, <code class="xref py py-func docutils literal notranslate"><span class="pre">add()</span></code> is categorised under <code class="xref py py-mod docutils literal notranslate"><span class="pre">mathematical_functions</span></code> with a sub-category of <code class="xref py py-mod docutils literal notranslate"><span class="pre">arithmetic_operations</span></code> as shown in the <a class="reference external" href="https://numpy.org/doc/stable/reference/index.html">numpy mathematical functions</a> directory.</p>
 <p>The function arguments for this function are slightly more complex due to the extra optional arguments.
-Additional handling code is added to recover the behaviour according to the <a href="#id6"><span class="problematic" id="id7">`numpy.add`_</span></a> documentation.
+Additional handling code is added to recover the behaviour according to the <a class="reference external" href="https://numpy.org/doc/1.23/reference/generated/numpy.add.html">numpy.add</a> documentation.
 For example, if <code class="code docutils literal notranslate"><span class="pre">dtype</span></code> is specified, the arguments will be cast to the desired type through <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.astype()</span></code>.
 The returned result is then obtained through <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.add()</span></code> just like the other examples.</p>
 <p>However, the arguments <code class="code docutils literal notranslate"><span class="pre">casting</span></code>, <code class="code docutils literal notranslate"><span class="pre">order</span></code> and <code class="code docutils literal notranslate"><span class="pre">subok</span></code> are completely unhandled here.
@@ -393,7 +393,7 @@ For example, we can simply reverse the result by calling <code class="xref py py
 For example, at the time of writing, implementing <code class="xref py py-func docutils literal notranslate"><span class="pre">median()</span></code> for the NumPy frontend would require a very manual and heavily compositional implementation.
 However, if the function <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.median()</span></code> was added to Ivy’s functional API, then this frontend implementation would become very simple, with some light wrapping around <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.median()</span></code>.</p>
 <p>Adding <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.median()</span></code> would be a sensible decision, as many frameworks support this function.
-When you come across such a function which is missing from Ivy, you should create a new issue on the Ivy repo, with the title <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.func_name()</span></code> and with the labels <code class="code docutils literal notranslate"><span class="pre">Suggestion</span></code>, <code class="code docutils literal notranslate"><span class="pre">Extension</span></code>, <code class="code docutils literal notranslate"><span class="pre">Ivy</span> <span class="pre">API</span></code> and <code class="code docutils literal notranslate"><span class="pre">Next</span> <span class="pre">Release</span></code>.
+When you come across such a function which is missing from Ivy, you should create a new issue on the Ivy repo, with the title <code class="xref py py-func docutils literal notranslate"><span class="pre">ivy.func_name()</span></code> and with the labels <code class="code docutils literal notranslate"><span class="pre">Suggestion</span></code>, <code class="code docutils literal notranslate"><span class="pre">Experimental</span></code>, <code class="code docutils literal notranslate"><span class="pre">Ivy</span> <span class="pre">API</span></code> and <code class="code docutils literal notranslate"><span class="pre">Next</span> <span class="pre">Release</span></code>.
 A member of our team will then review this issue, and if the proposed addition is deemed to be timely and sensible, then we will add this function to the “Extend Ivy Functional API” <a class="reference external" href="https://github.com/unifyai/ivy/issues/3856">ToDo list issue</a>.
 At this point in time, you can reserve the function for yourself and get it implemented in a unique PR.
 Once merged, you can then resume working on the frontend function, which will now be a much easier task with the new addition to Ivy.</p>
