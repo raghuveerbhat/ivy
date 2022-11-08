@@ -31,11 +31,12 @@ Container
    container/device.rst
    container/elementwise.rst
    container/experimental.rst
+   container/extensions.rst
    container/general.rst
    container/gradients.rst
    container/image.rst
    container/layers.rst
-   container/linalg.rst
+   container/linear_algebra.rst
    container/losses.rst
    container/manipulation.rst
    container/norms.rst

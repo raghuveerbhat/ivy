@@ -13,5 +13,5 @@ Elementwise
    :maxdepth: -1
    :caption: Elementwise
 
-   elementwise/ContainerWithElementWiseExperimental.rst
+   elementwise/ContainerWithElementWiseExtensions.rst
 
