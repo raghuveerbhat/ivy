@@ -20,7 +20,6 @@ Array methods
    array_methods/trapz.rst
    array_methods/float_power.rst
    array_methods/exp2.rst
-   array_methods/count_nonzero.rst
    array_methods/nansum.rst
    array_methods/gcd.rst
    array_methods/isclose.rst
