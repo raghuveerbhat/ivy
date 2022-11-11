@@ -1359,14 +1359,16 @@
 <span class="k">def</span> <span class="nf">atleast_2d</span><span class="p">(</span>
     <span class="o">*</span><span class="n">arys</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">],</span>
 <span class="p">)</span> <span class="o">-&gt;</span> <span class="n">List</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">]:</span>
-    <span class="sd">&quot;&quot;&quot;Convert inputs to arrays with at least one dimension.</span>
+    <span class="sd">&quot;&quot;&quot;Convert inputs to arrays with at least two dimension.</span>
 <span class="sd">    Scalar inputs are converted to 2-dimensional arrays, whilst</span>
 <span class="sd">    higher-dimensional inputs are preserved.</span>
 
 <span class="sd">    Parameters</span>
 <span class="sd">    ----------</span>
 <span class="sd">    arys</span>
-<span class="sd">        One or more input arrays.</span>
+<span class="sd">        One or more array-like sequences. Non-array inputs are </span>
+<span class="sd">        converted to arrays. Arrays that already have two or more </span>
+<span class="sd">        dimensions are preserved.</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
