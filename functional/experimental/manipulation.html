@@ -131,10 +131,10 @@
   <section id="module-ivy.functional.experimental.manipulation">
 <span id="manipulation"></span><h1>Manipulation<a class="headerlink" href="#module-ivy.functional.experimental.manipulation" title="Permalink to this heading"></a></h1>
 <dl class="py function">
-<dt class="sig sig-object py" id="ivy.functional.experimental.manipulation.atleast_2d">
-<span class="sig-prename descclassname"><span class="pre">ivy.functional.experimental.manipulation.</span></span><span class="sig-name descname"><span class="pre">atleast_2d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arys</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/functional/experimental/manipulation.html#atleast_2d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.experimental.manipulation.atleast_2d" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="ivy.functional.experimental.manipulation.atleast_1d">
+<span class="sig-prename descclassname"><span class="pre">ivy.functional.experimental.manipulation.</span></span><span class="sig-name descname"><span class="pre">atleast_1d</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">arys</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/ivy/functional/experimental/manipulation.html#atleast_1d"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#ivy.functional.experimental.manipulation.atleast_1d" title="Permalink to this definition"></a></dt>
 <dd><p>Convert inputs to arrays with at least one dimension.
-Scalar inputs are converted to 2-dimensional arrays, whilst
+Scalar inputs are converted to 1-dimensional arrays, whilst
 higher-dimensional inputs are preserved.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -144,19 +144,19 @@ higher-dimensional inputs are preserved.</p>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../../data_classes/array/array/Array.html#ivy.array.array.Array" title="ivy.array.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>ret</em> – An array, or list of arrays, each with atleast 2D.
+<dd class="field-odd"><p><em>ret</em> – An array, or list of arrays, each with atleast 1D.
 Copies are made only if necessary.</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">ary1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">ary1</span><span class="p">)</span>
-<span class="go">ivy.array([[5]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ary2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([[[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="n">ary2</span><span class="p">)</span>
-<span class="go">ivy.array([[[3, 4]]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_2d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
-<span class="go">[ivy.array([[6]]), ivy.array([[7]]), ivy.array([[8]])]</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ary1</span><span class="p">)</span>
+<span class="go">ivy.array([5])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ary2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">ary2</span><span class="p">)</span>
+<span class="go">ivy.array([[3, 4]])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">)</span>
+<span class="go">[ivy.array([6]), ivy.array([7]), ivy.array([8])]</span>
 </pre></div>
 </div>
 </dd></dl>
