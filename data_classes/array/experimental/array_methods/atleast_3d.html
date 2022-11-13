@@ -147,17 +147,20 @@ to this method with minimal changes.</p>
 <dd class="field-even"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">List</span></code>[<a class="reference internal" href="../../array/Array.html#ivy.array.array.Array" title="ivy.array.array.Array"><code class="xref py py-class docutils literal notranslate"><span class="pre">Array</span></code></a>]</p>
 </dd>
 <dt class="field-odd">Returns</dt>
-<dd class="field-odd"><p><em>ret</em> – List of arrays, each with a.ndim &gt;= 3. Copies are made
-only if necessary and views with three or more dimensions are returned.
-For example, a 1-D array of shape (N,) becomes a view of shape (1, N, 1),
-and a 2-D array of shape (M, N) becomes a view of shape (M, N, 1).</p>
+<dd class="field-odd"><p><em>ret</em> – List of arrays, each with a.ndim &gt;= 3. Copies are made only if necessary
+and views with three or more dimensions are returned. For example, a 1-D
+array of shape (N,) becomes a view of shape (1, N, 1), and a 2-D array
+of shape (M, N) becomes a view of shape (M, N, 1).</p>
 </dd>
 </dl>
 <p class="rubric">Examples</p>
 <div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]])</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">a2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">8</span><span class="p">])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">a1</span><span class="o">.</span><span class="n">atleast_3d</span><span class="p">(</span><span class="n">a2</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">)</span>
-<span class="go">[ivy.array([[1, 2, 3]]), ivy.array([[4]]), ivy.array([[5]]), ivy.array([[6]])]</span>
+<span class="go">[ivy.array([[[1],</span>
+<span class="go">        [2],</span>
+<span class="go">        [3]]]), ivy.array([[[4],</span>
+<span class="go">        [8]]]), ivy.array([[[5]]]), ivy.array([[[6]]])]</span>
 </pre></div>
 </div>
 </dd></dl>

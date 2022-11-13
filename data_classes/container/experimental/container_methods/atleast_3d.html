@@ -165,13 +165,14 @@ of shape (N,) becomes a view of shape (1, N, 1), and a 2-D array of shape
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ary2</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">9</span><span class="p">),</span> <span class="n">b</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>                        <span class="n">c</span><span class="o">=</span><span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="mi">3</span><span class="p">))</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ary1</span><span class="o">.</span><span class="n">atleast_3d</span><span class="p">(</span><span class="n">ary2</span><span class="p">)</span>
 <span class="go">[{</span>
-<span class="go">    a: ivy.array([[1]]),</span>
-<span class="go">    b: ivy.array([[3, 4]]),</span>
-<span class="go">    c: ivy.array([[5]])</span>
+<span class="go">    a: ivy.array([[[1]]]),</span>
+<span class="go">    b: ivy.array([[[3],</span>
+<span class="go">                   [4]]]),</span>
+<span class="go">    c: ivy.array([[[5]]])</span>
 <span class="go">}, {</span>
-<span class="go">    a: ivy.array([[9]]),</span>
-<span class="go">    b: ivy.array([[2]]),</span>
-<span class="go">    c: ivy.array([[3]])</span>
+<span class="go">    a: ivy.array([[[9]]]),</span>
+<span class="go">    b: ivy.array([[[2]]]),</span>
+<span class="go">    c: ivy.array([[[3]]])</span>
 <span class="go">}]</span>
 </pre></div>
 </div>
